@@ -1,0 +1,60 @@
+* {
+	font-family: "Segoe UI";
+}
+
+ body {
+ 	background-color:rgba(149,122,129,1);
+ }
+
+ .DIV1 {
+ 	background-color:rgba(203,176,193,1);
+ 	border-radius: 15px;
+ 	width:60%;
+ 	margin:auto;
+ 	padding:8px;	
+ 	text-align: center;
+ }
+
+ #DIV2 {
+ 	background-color:rgba(53,43,58,1); 
+ 	border-radius: 30px;
+ 	width:35%;
+ 	margin: auto;
+ 	color:White;
+ 	padding-bottom: 8px;
+ }
+
+ hr {
+ 	background-color:BurlyWood;
+ 	border: 0 none;
+ 	width:95%;
+ 	height:3px;
+
+ }
+
+ .HHH {
+ 	text-decoration: none;
+ 	font-weight: normal
+ }
+
+ .CONTENTS {
+ 	border:3px solid BurlyWood !important;
+ 	margin:auto;
+ 	width:20%;
+ 	padding-bottom:15px;
+ 
+ }
+
+ .CONTENTS a {
+ 	-webkit-transition: color 0.5s;
+ 	text-decoration: none;
+ 	color:White;
+ }
+
+ .CONTENTS a:visited {
+ 	color:White;
+ }
+
+ .CONTENTS a:hover {
+ 	color:aqua;
+ }
