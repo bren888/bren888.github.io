@@ -8,12 +8,15 @@
 
 	<style>
 
-		* {
-			font-family:sans-serif;
-		}
-
 		body {
+			-webkit-font-smoothing: antialiased !important;
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+			font-family:sans-serif;
 			background-color: BurlyWood;
+			background-image: url(BG.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
 		}
 
 		#Container {
@@ -37,7 +40,7 @@
 		}
 
 		#Container h1:hover, #Container h2:hover {
-			text-shadow: 0 0 10px Limegreen;
+			text-shadow: 0 0 10px orange;
 		}
 
 		span {
@@ -46,7 +49,7 @@
 			letter-spacing: 2px;
 		}
 
-		#Main-Horizontal-Line {
+		.Main-Horizontal-Line {
 			background-color:orange;
 			border: 0 none;
 			height:5px;
@@ -59,6 +62,10 @@
 		.Photos {
 			border: 5px solid Orange;
 			box-shadow: 0px 3px 5px black;
+		}
+
+		.Photo-Caption {
+			margin-top: 10px;
 		}
 
 		figure[class="Quotes"] { 
@@ -81,13 +88,34 @@
 		}
 
 		.Numbering {
+			float: left;
+			border: 5px solid orange;
+			border-radius: 50%;
+			padding-left:20px;
+			padding-right:20px;
 			font-size:4em;
 			font-weight: 100;
-			float: left;
 			margin-left:100px;
 			margin-top: 7%;
 		}
 
+		#Back-To-Top-BTN {
+			-webkit-transition: all 0.25s ease-in-out;
+			display:inline-block;
+			background-color:orange;
+			border: 1px solid #030;
+			border-radius: 30px;
+			margin:40px;
+			padding: 10px;
+			padding-left: 20px;
+			padding-right: 20px;
+			color:rgba(0,0,0,0.7);
+			text-decoration: none;
+		}
+
+		#Back-To-Top-BTN:hover {
+			background-color: #F60;
+		}
 
 	</style>
 
@@ -97,111 +125,122 @@
 
 <div id="Container">
 
-	<h1><span>S</span>ome <span>R</span>are <span>H</span>istorical <span>P</span>hotos</h1>
+	<h1 id="This-Is-The-Top"><span>S</span>ome <span>R</span>are <span>H</span>istorical <span>P</span>hotos</h1>
 
-	<hr id="Main-Horizontal-Line">
+	<hr class="Main-Horizontal-Line">
 
 	<figure>
 		<img class="Photos" src="Images/H1.jpg" title="A boxing match on board the USS Oregon in 1897." alt="A boxing match on board the USS Oregon in 1897." />
-		<figcaption>A boxing match on board the <i>USS Oregon</i> in <i>1897</i>.</figcaption>
+		<figcaption class="Photo-Caption">A boxing match on board the <i>USS Oregon</i> in <i>1897</i>.</figcaption>
 	</figure>
 
 	<figure>
 		<img class="Photos" src="Images/H2.jpg" title="Albert Einstein looking fabulous." alt="Albert Einstein looking fabulous." />
-		<figcaption><i>Albert Einstein</i> looking fabulous.</figcaption>
+		<figcaption class="Photo-Caption"><i>Albert Einstein</i> looking fabulous.</figcaption>
 	</figure>
 
 	<figure>
 		<img class="Photos" src="Images/H3.jpg" title="Here's his report card!" alt="Here's his report card!" />
-		<figcaption>Here's <i>his</i> report card!</figcaption>
+		<figcaption class="Photo-Caption">Here's <i>his</i> report card!</figcaption>
 	</figure>
 
 	<figure>
 		<img class="Photos" src="Images/H4.jpg" title="The Microsoft staff in 1978." alt="The Microsoft staff in 1978." />
-		<figcaption>The <i>Microsoft</i> staff in <i>1978</i>.</figcaption>
+		<figcaption class="Photo-Caption">The <i>Microsoft</i> staff in <i>1978</i>.</figcaption>
 	</figure>
 
 	<figure>
 		<img class="Photos" src="Images/H5.jpg" title="The London sky following a bombing and dogfight between British and German planes in 1940." alt="The London sky following a bombing and dogfight between British and German planes in 1940." />
-		<figcaption>The <i>London</i> sky following a bombing and dogfight between <i>British</i> and <i>German</i> planes in <i>1940</i>.</figcaption>
+		<figcaption class="Photo-Caption">The <i>London</i> sky following a bombing and dogfight between <i>British</i> and <i>German</i> planes in <i>1940</i>.</figcaption>
 	</figure>
 
 	<figure>
 		<img class="Photos" src="Images/H6.jpg" title="Nagasaki, 20 minutes after the atomic bombing in 1945." alt="Nagasaki, 20 minutes after the atomic bombing in 1945." />
-		<figcaption><i>Nagasaki</i>, 20 minutes after the atomic bombing in <i>1945</i>.</figcaption>
+		<figcaption class="Photo-Caption"><i>Nagasaki</i>, 20 minutes after the atomic bombing in <i>1945</i>.</figcaption>
 	</figure>
 
 	<figure>
 		<img class="Photos" src="Images/H7.jpg" title="The first McDonalds." alt="The first McDonalds." />
-		<figcaption>The first <i>McDonalds</i>.</figcaption>
+		<figcaption class="Photo-Caption">The first <i>McDonalds</i>.</figcaption>
 	</figure>
 
 	<figure>
 		<img class="Photos" src="Images/H8.jpg" title="Elvis in the Army." alt="Elvis in the Army." />
-		<figcaption><i>Elvis</i> in the Army.</figcaption>
+		<figcaption class="Photo-Caption"><i>Elvis</i> in the Army.</figcaption>
 	</figure>
 
 	<figure>
 		<img class="Photos" src="Images/H9.jpg" title="Construction of Christ the Redeemer in Rio da Janeiro, Brazil." alt="Construction of Christ the Redeemer in Rio da Janeiro, Brazil." />
-		<figcaption>Construction of <i>Christ the Redeemer</i> in <i>Rio da Janeiro, Brazil</i>.</figcaption>
+		<figcaption class="Photo-Caption">Construction of <i>Christ the Redeemer</i> in <i>Rio da Janeiro, Brazil</i>.</figcaption>
 	</figure>
 
 	<figure>
 		<img class="Photos" src="Images/H10.jpg" title="The Beatles meet Muhammad Ali." alt="The Beatles meet Muhammad Ali." />
-		<figcaption><i>The Beatles</i> meet <i>Muhammad Ali</i>.</figcaption>
+		<figcaption class="Photo-Caption"><i>The Beatles</i> meet <i>Muhammad Ali</i>.</figcaption>
 	</figure>
 
 	<figure>
 		<img class="Photos" src="Images/H11.jpg" title="Fourteen year-old Osama bin Laden.  He's second from the right." alt="Fourteen year-old Osama bin Laden.  He's second from the right." />
-		<figcaption>Fourteen year-old <i>Osama bin Laden</i>.  He's second from the right.</figcaption>
+		<figcaption class="Photo-Caption">Fourteen year-old <i>Osama bin Laden</i>.  He's second from the right.</figcaption>
 	</figure>
 
 	<figure>
 		<img class="Photos" src="Images/H12.jpg" title="An actual Titanic boarding pass." alt="An actual Titanic boarding pass." />
-		<figcaption>An actual <i>Titanic</i> boarding pass.</figcaption>
+		<figcaption class="Photo-Caption">An actual <i>Titanic</i> boarding pass.</figcaption>
 	</figure>
 
 	<figure>
 		<img class="Photos" src="Images/H13.png" title="Ferdinand Porsche (yes, THAT Porsche) showcasing the Volkswagen Beetle to Adolf Hitler in 1935." alt="Ferdinand Porsche (yes, THAT Porsche) showcasing the Volkswagen Beetle to Adolf Hitler in 1935." />
-		<figcaption><i>Ferdinand Porsche</i> (yes, THAT Porsche) showcasing the <i>Volkswagen Beetle</i> to <i>Adolf Hitler</i> in <i>1935</i>.</figcaption>
+		<figcaption class="Photo-Caption"><i>Ferdinand Porsche</i> showcasing the <i>Volkswagen Beetle</i> to <i>Adolf Hitler</i> in <i>1935</i>.</figcaption>
 	</figure>
 
 	<figure>
 		<img class="Photos" src="Images/H14.jpg" title="The first Wal-Mart." alt="The first Wal-Mart." />
-		<figcaption>The first <i>Wal-Mart</i>.</figcaption>
+		<figcaption class="Photo-Caption">The first <i>Wal-Mart</i>.</figcaption>
 	</figure>
 
 	<h2><span>BONUS</span>: Some Quotes</h2>
 
-	<hr id="Main-Horizontal-Line">
+	<hr class="Main-Horizontal-Line">
 
-	<h3 class="Numbering">(1)</h1>
+	<h3 class="Numbering">1</h1>
 
 	<figure class="Quotes">
-		<blockquote>The revolution is not an apple that falls when it is ripe. You have to make it fall.</blockquote>
-		<figcaption class="Quotes">-Che Guevara</figcaption>
+		<i>
+			<blockquote>The revolution is not an apple that falls when it is ripe. You have to make it fall.</blockquote>
+			<figcaption class="Quotes">-Che Guevara</figcaption>
+		</i>
 	</figure>
 
 	<br>
 
-	<h3 class="Numbering">(2)</h1>
+	<h3 class="Numbering">2</h1>
 
 	<figure class="Quotes">
-		<blockquote>Happiness is not something ready made. It comes from your own actions.</blockquote>
-		<figcaption class="Quotes">-Dalai Lama</figcaption>
+		<i>
+			<blockquote>Happiness is not something ready made. It comes from your own actions.</blockquote>
+			<figcaption class="Quotes">-Dalai Lama</figcaption>
+		</i>
 	</figure>
 
 	<br>
 
-	<h3 class="Numbering">(3)</h1>
+	<h3 class="Numbering">3</h1>
 
 	<figure class="Quotes">
-		<blockquote>If you can't explain it simply, you don't understand it well enough.</blockquote>
-		<figcaption class="Quotes">-Albert Einstein</figcaption>
+		<i>
+			<blockquote>If you can't explain it simply, you don't understand it well enough.</blockquote>
+			<figcaption class="Quotes">-Albert Einstein</figcaption>
+		</i>
 	</figure>
 
 	<br>
 
+	<h2><span>H</span>ad <span>E</span>nough?</h2>
+
+	<hr class="Main-Horizontal-Line">
+
+	<a id="Back-To-Top-BTN" href="#This-Is-The-Top" title="Back To Top"><b>Go Back To Top</b></a>
 
 </div>
 
